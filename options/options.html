@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Email Alias Configuration</title>
-    <link rel="stylesheet" type="text/css" href="options.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Alias Generator Options</title>
+    <link rel="stylesheet" href="options.css">
 </head>
 <body>
     <div class="container">
-        <h1>Email Alias Configuration</h1>
+        <h1>Email Alias Generator Options</h1>
         <form id="emailForm">
-            <label for="baseEmail">Base Email Address:</label>
-            <input type="email" id="baseEmail" name="baseEmail" required>
+            <div class="form-group">
+                <label for="baseEmail">Base Email Address:</label>
+                <input type="email" id="baseEmail" placeholder="Enter your base email" required>
+            </div>
             <button type="submit">Save</button>
         </form>
     </div>
