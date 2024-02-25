@@ -1,23 +1,18 @@
-document.addEventListener('DOMContentLoaded', loadOptions);
-document.getElementById('emailForm').addEventListener('submit', saveOptions);
-
-function loadOptions() {
-    // Load the currently saved base email from Chrome's storage and set it in the input field
+document.addEventListener('DOMContentLoaded', function() {
+    // Load existing base email if present
     chrome.storage.sync.get('baseEmail', function(data) {
         document.getElementById('baseEmail').value = data.baseEmail || '';
     });
-}
+});
 
-function saveOptions(e) {
-    e.preventDefault();
+document.getElementById('saveEmail').addEventListener('click', function() {
     const baseEmail = document.getElementById('baseEmail').value;
-    if (baseEmail) {
-        // Save the base email to Chrome's storage
-        chrome.storage.sync.set({baseEmail: baseEmail}, function() {
-            // Notify the user that the email was saved
+    // Basic validation
+    if (baseEmail && baseEmail.includes('@')) {
+        chrome.storage.sync.set({'baseEmail': baseEmail}, function() {
             alert('Base email address saved.');
         });
     } else {
         alert('Please enter a valid email address.');
     }
-}
+});

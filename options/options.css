@@ -1,35 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-}
-
-.container {
-    max-width: 400px;
-    margin: auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+label {
+    display: block; /* Makes the label take up the full width, ensuring the input starts on a new line */
+    margin-bottom: 8px; /* Adds some space between the label and the input field */
 }
 
 input[type="email"] {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    width: 300px; 
 }

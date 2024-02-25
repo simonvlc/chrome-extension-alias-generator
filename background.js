@@ -1,4 +1,3 @@
-// SHOW THE OPTIONS PAGE ON INSTALLING THE APP
 chrome.runtime.onInstalled.addListener(function(details) {
     // Check if the extension was installed (not updated)
     if (details.reason === "install") {
@@ -6,7 +5,6 @@ chrome.runtime.onInstalled.addListener(function(details) {
         chrome.runtime.openOptionsPage();
     }
 
-    // CREATING CONTEXT MENU
     chrome.contextMenus.create({
         id: "viewAliasHistory",
         title: "View Alias History",
@@ -14,7 +12,6 @@ chrome.runtime.onInstalled.addListener(function(details) {
     });
 });
 
-// MONITOR FOR ONCLICK EVENTS ON THE EXTENSION ICON
 chrome.action.onClicked.addListener(function(tab) {
     chrome.scripting.executeScript({
         target: {tabId: tab.id},
@@ -22,7 +19,6 @@ chrome.action.onClicked.addListener(function(tab) {
     });
 });
 
-// CONTEXT MENU ITEM ACTION
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
     if (info.menuItemId === "viewAliasHistory") {
         chrome.tabs.create({url: chrome.runtime.getURL('history/history.html')});
