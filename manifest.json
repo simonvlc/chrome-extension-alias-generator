@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Alias Generator",
+  "version": "1.0",
+  "description": "Generate email aliases on-the-fly based on the domain you're visiting, for Gmail users.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "Generate Email Alias"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-scripts/content-scripts.js"],
+      "css": ["content-scripts/content-scripts.css"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
