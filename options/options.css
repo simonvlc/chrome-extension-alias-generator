@@ -1,3 +1,19 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content {
+    flex: 1;
+}
+
+.credits {
+    margin: 20px 0;
+}
+
 label {
     display: block; /* Makes the label take up the full width, ensuring the input starts on a new line */
     margin-bottom: 8px; /* Adds some space between the label and the input field */
