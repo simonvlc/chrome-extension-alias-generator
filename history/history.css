@@ -13,3 +13,33 @@ body, html {
 .credits {
     margin: 20px 0;
 }
+
+/* Styles for the overall container, if not already defined */
+.history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 600px; /* Adjust based on your preference */
+    margin: 0 auto; /* Center the container */
+}
+
+.email-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.email-entry span, .email-entry button {
+    margin: 0 5px; /* Adds a little space between the email text and the button */
+}
+
+/* Add or adjust existing styles for button for consistency */
+button {
+    cursor: pointer;
+    padding: 5px 10px; /* Adjust padding as needed */
+    /* Add other button styles as needed */
+}
